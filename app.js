@@ -1,8 +1,19 @@
-const http = require('http');
 
-http.createServer(function(req, res){
-	res.write("On the way to beging a full snack engineer!");
-	res.end();
-}).listen(3000);
+const express = require("express");
+const path = require('path');
+// import Router file
+const pageRouter = require('./routers/index');
 
-console.log("Server started on port 3000");
+const app = express();
+const http = require("http").Server(app);
+
+//For set layouts of html view
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+// Define All Route 
+pageRouter(app);
+
+http.listen(3000, function () {
+  console.log('listening on *:3000');
+});
