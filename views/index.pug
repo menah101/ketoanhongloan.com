@@ -2,4 +2,134 @@ extends base
 
 block content
   main
-    h1 Content Main
+    .c-breadcrumb
+      .l-container
+        .c-breadcrumb__content
+          ul.c-breadcrumb__list
+            li.c-breadcrumb__item
+              a.c-breadcrumb__link.c-breadcrumb__link--home(href='/')
+                i.c-breadcrumb__icon
+                  svg.w-6.h-6(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', stroke-width='1.5', stroke='currentColor')
+                    path(stroke-linecap='round', stroke-linejoin='round', d='M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25')
+                span Trang chủ
+    .p-information
+      .l-container
+        .p-information__inner
+          p.p-information__text Blog chia sẽ những kiến thức và giải pháp kế toán cho các doanh nghiệp 🥳
+    .p-anchor
+      .l-container
+        ul.p-anchor__list
+          li.p-anchor__item
+            a.p-anchor__link.js-anchor-link(href='#thong-tin-tu-thue')
+              i.p-anchor__icon
+                svg.w-6.h-6(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', stroke-width='1.5', stroke='currentColor')
+                  path(stroke-linecap='round', stroke-linejoin='round', d='M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z')
+              span.p-anchor__text Thông tin từ thuế
+          li.p-anchor__item
+            a.p-anchor__link.js-anchor-link(href='#tips-excel')
+              i.p-anchor__icon
+                svg.w-6.h-6(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', stroke-width='1.5', stroke='currentColor')
+                  path(stroke-linecap='round', stroke-linejoin='round', d='M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0120.25 6v12A2.25 2.25 0 0118 20.25H6A2.25 2.25 0 013.75 18V6A2.25 2.25 0 016 3.75h1.5m9 0h-9')
+              span.p-anchor__text Tips Excel
+          li.p-anchor__item
+            a.p-anchor__link.js-anchor-link(href='#dich-vu-ke-toan')
+              i.p-anchor__icon
+                svg.w-6.h-6(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', stroke-width='1.5', stroke='currentColor')
+                  path(stroke-linecap='round', stroke-linejoin='round', d='M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25')
+              span.p-anchor__text Dịch vụ kế toán
+    .p-category
+      .l-container
+        .p-category__inner
+          // ./ START: CATEGORY BOX
+          #dich-vu-ke-toan.p-category__box
+            .p-category__top
+              h2.p-category__heading
+                i.p-category__icon
+                  svg.w-6.h-6(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', stroke-width='1.5', stroke='currentColor')
+                    path(stroke-linecap='round', stroke-linejoin='round', d='M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25')
+                span.p-category__sub Dịch vụ kế toán
+            .p-service
+              .p-service__wrapper
+                ul.p-service__list
+                  li.p-service__item
+                    a.p-service__link(href='/dich-vu-ke-toan/')
+                      .p-service__thumb
+                        img.p-service__img(src='/images/dich-vu-ke-toan.png', alt='dịch vụ kế toán')
+                      .p-service__content
+                        h4.p-service__title Dịch vụ kế toán
+                        span.p-service__desc Giải pháp kế toán cho doanh nghiệp
+                  li.p-service__item
+                    a.p-service__link(href='/dich-vu-ke-toan/#dich-vu-thanh-lap-cong-ty')
+                      .p-service__thumb
+                        img.p-service__img(src='/images/dich-vu-thanh-lap-cong-ty.png', alt='dịch vụ thành lập công ty')
+                      .p-service__content
+                        h4.p-service__title Dịch vụ thành lập công ty
+                        span.p-service__desc Đăng ký giấy phép công ty
+                  li.p-service__item
+                    a.p-service__link(href='/dich-vu-ke-toan/#dich-vu-bao-hiem-xa-hoi')
+                      .p-service__thumb
+                        img.p-service__img(src='/images/dich-vu-bao-hiem-xa-hoi.png', alt='dịch vụ thành lập công ty')
+                      .p-service__content
+                        h4.p-service__title Dịch vụ bào hiểm xã hội
+                        span.p-service__desc Thủ tục làm bảo hiểm xã hội...
+                  li.p-service__item
+                    a.p-service__link(href='/dich-vu-ke-toan/#dich-vu-chu-ky-so')
+                      .p-service__thumb
+                        img.p-service__img(src='/images/dich-vu-chu-ky-so.png', alt='dịch vụ chữ ký số')
+                      .p-service__content
+                        h4.p-service__title Dịch vụ chữ ký số
+                        span.p-service__desc Đăng ký và gia hạng chữ ký số
+          // ./ END: CATEGORY BOX
+          // ./ START: CATEGORY BOX
+          #thong-tin-tu-thue.p-category__box
+            .p-category__top
+              h2.p-category__heading
+                i.p-category__icon
+                  svg.w-6.h-6(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', stroke-width='1.5', stroke='currentColor')
+                    path(stroke-linecap='round', stroke-linejoin='round', d='M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z')
+                span.p-category__sub Bài viết
+              .p-category__more
+                a.p-category__more-link(href='/thong-tin-thue/')
+                  span.p-category__more-text Xem thêm
+                  i.p-category__more-icon
+                    svg(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', strokewidth='{1.5}', stroke='currentColor', classname='w-6 h-6')
+                      path(strokelinecap='round', strokelinejoin='round', d='M8.25 4.5l7.5 7.5-7.5 7.5')
+            ul.p-category__list
+              li.p-category__item
+                a.p-category__link(href='')
+                  span.p-category__date Sep 03,2023
+                  h3.p-category__title Quy tr&igrave;nh b&aacute;o c&aacute;o thu&#x1EBF; 2023
+                  p.p-category__desc
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta debitis aspernatur quod cumque, asperiores ratione. Ipsam at aut aperiam facilis, pariatur earum itaque officia quia, ex ea aspernatur est.
+              li.p-category__item
+                a.p-category__link(href='')
+                  span.p-category__date Sep 03,2023
+                  h3.p-category__title Quy tr&igrave;nh b&aacute;o c&aacute;o thu&#x1EBF; 2023
+                  p.p-category__desc
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta debitis aspernatur quod cumque, asperiores ratione. Ipsam at aut aperiam facilis, pariatur earum itaque officia quia, ex ea aspernatur est.
+              li.p-category__item
+                a.p-category__link(href='')
+                  span.p-category__date Sep 03,2023
+                  h3.p-category__title Quy tr&igrave;nh b&aacute;o c&aacute;o thu&#x1EBF; 2023
+                  p.p-category__desc
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta debitis aspernatur quod cumque, asperiores ratione. Ipsam at aut aperiam facilis, pariatur earum itaque officia quia, ex ea aspernatur est.
+              li.p-category__item
+                a.p-category__link(href='')
+                  span.p-category__date Sep 03,2023
+                  h3.p-category__title Quy tr&igrave;nh b&aacute;o c&aacute;o thu&#x1EBF; 2023
+                  p.p-category__desc
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta debitis aspernatur quod cumque, asperiores ratione. Ipsam at aut aperiam facilis, pariatur earum itaque officia quia, ex ea aspernatur est.
+              li.p-category__item
+                a.p-category__link(href='')
+                  span.p-category__date Sep 03,2023
+                  h3.p-category__title Quy tr&igrave;nh b&aacute;o c&aacute;o thu&#x1EBF; 2023
+                  p.p-category__desc
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta debitis aspernatur quod cumque, asperiores ratione. Ipsam at aut aperiam facilis, pariatur earum itaque officia quia, ex ea aspernatur est.
+              li.p-category__item
+                a.p-category__link(href='')
+                  span.p-category__date Sep 03,2023
+                  h3.p-category__title Quy tr&igrave;nh b&aacute;o c&aacute;o thu&#x1EBF; 2023
+                  p.p-category__desc
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic soluta debitis aspernatur quod cumque, asperiores ratione. Ipsam at aut aperiam facilis, pariatur earum itaque officia quia, ex ea aspernatur est.
+          // ./ END: CATEGORY BOX
+    // ./ END: CATEGORY

@@ -1,0 +1,490 @@
+extends base
+
+block content
+  main
+    .c-breadcrumb
+      .l-container
+        .c-breadcrumb__content
+          ul.c-breadcrumb__list
+            li.c-breadcrumb__item
+              a.c-breadcrumb__link.c-breadcrumb__link--home(href='/')
+                i.c-breadcrumb__icon
+                  svg.w-6.h-6(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', stroke-width='1.5', stroke='currentColor')
+                    path(stroke-linecap='round', stroke-linejoin='round', d='M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25')
+                span Trang chủ
+            li.c-breadcrumb__item
+              span.c-breadcrumb__link Dịch vụ kế toán
+    .c-banner
+      .c-banner__bg
+        img.c-banner__img(src='/images/dich-vu-ke-toan-banner.png', alt='Dịch vụ kế toán')
+      .c-banner__inner
+        h1.c-banner__title  Dịch vụ kế toán
+          br
+          span.c-banner__title--sub Cung cấp giải pháp kế toán cho doanh nghiệp
+    .p-service-account
+      .p-information
+        .l-container
+          .p-information__inner
+            p.p-information__text Dịch vụ kế toán trọn gói chuyên nghiệp và hiệu quả, giúp quản lý tài chính doanh nghiệp dễ dàng và đáng tin cậy.
+      .p-anchor
+        .l-container
+          ul.p-anchor__list
+            li.p-anchor__item
+              a.p-anchor__link.js-anchor-link(href='#dich-vu-bao-cao-thue')
+                i.p-anchor__icon
+                  svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+                    path(d='M6.42857 9.75L2.25 12L6.42857 14.25M6.42857 9.75L12 12.75L17.5714 9.75M6.42857 9.75L2.25 7.5L12 2.25L21.75 7.5L17.5714 9.75M17.5714 9.75L21.75 12L17.5714 14.25M17.5714 14.25L21.75 16.5L12 21.75L2.25 16.5L6.42857 14.25M17.5714 14.25L12 17.25L6.42857 14.25', stroke='#0F172A', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                span.p-anchor__text Dịch vụ báo cáo thuế
+            li.p-anchor__item
+              a.p-anchor__link.js-anchor-link(href='#dich-vu-quyet-toan-thue')
+                i.p-anchor__icon
+                  svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+                    path(d='M12 3V20.25M12 20.25C10.528 20.25 9.1179 20.515 7.81483 21M12 20.25C13.472 20.25 14.8821 20.515 16.1852 21M18.75 4.97089C16.5446 4.66051 14.291 4.5 12 4.5C9.70897 4.5 7.45542 4.66051 5.25 4.97089M18.75 4.97089C19.7604 5.1131 20.7608 5.28677 21.75 5.49087M18.75 4.97089L21.3704 15.6961C21.4922 16.1948 21.2642 16.7237 20.7811 16.8975C20.1468 17.1257 19.4629 17.25 18.75 17.25C18.0371 17.25 17.3532 17.1257 16.7189 16.8975C16.2358 16.7237 16.0078 16.1948 16.1296 15.6961L18.75 4.97089ZM2.25 5.49087C3.23922 5.28677 4.23956 5.1131 5.25 4.97089M5.25 4.97089L7.87036 15.6961C7.9922 16.1948 7.76419 16.7237 7.28114 16.8975C6.6468 17.1257 5.96292 17.25 5.25 17.25C4.53708 17.25 3.8532 17.1257 3.21886 16.8975C2.73581 16.7237 2.5078 16.1948 2.62964 15.6961L5.25 4.97089Z', stroke='#0F172A', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                span.p-anchor__text Dịch vụ quyết toán thuế
+            li.p-anchor__item
+              a.p-anchor__link.js-anchor-link(href='#dich-vu-bao-cao-tai-chinh')
+                i.p-anchor__icon
+                  svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+                    path(d='M9 6.75002V15M15 9.00002V17.25M15.5031 20.7485L20.3781 18.311C20.7592 18.1204 21 17.7309 21 17.3047V4.82031C21 3.98401 20.1199 3.44007 19.3719 3.81408L15.5031 5.74847C15.1864 5.90683 14.8136 5.90683 14.4969 5.74847L9.50312 3.25158C9.1864 3.09322 8.8136 3.09322 8.49688 3.25158L3.62188 5.68908C3.24075 5.87965 3 6.26919 3 6.69531V19.1797C3 20.016 3.8801 20.56 4.62811 20.186L8.49688 18.2516C8.8136 18.0932 9.1864 18.0932 9.50312 18.2516L14.4969 20.7485C14.8136 20.9068 15.1864 20.9068 15.5031 20.7485Z', stroke='#0F172A', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                span.p-anchor__text Dịch vụ báo cáo tài chính
+            li.p-anchor__item
+              a.p-anchor__link.js-anchor-link(href='#dich-vu-thanh-lap-cong-ty')
+                i.p-anchor__icon
+                  svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+                    path(d='M2.25 21H21.75M3.75 3V21M14.25 3V21M20.25 7.5V21M6.75 6.75H7.5M6.75 9.75H7.5M6.75 12.75H7.5M10.5 6.75H11.25M10.5 9.75H11.25M10.5 12.75H11.25M6.75 21V17.625C6.75 17.0037 7.25368 16.5 7.875 16.5H10.125C10.7463 16.5 11.25 17.0037 11.25 17.625V21M3 3H15M14.25 7.5H21M17.25 11.25H17.2575V11.2575H17.25V11.25ZM17.25 14.25H17.2575V14.2575H17.25V14.25ZM17.25 17.25H17.2575V17.2575H17.25V17.25Z', stroke='#0F172A', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                span.p-anchor__text Dịch vụ thành lập công ty
+            li.p-anchor__item
+              a.p-anchor__link.js-anchor-link(href='#dich-vu-lam-so-sach-ke-toan')
+                i.p-anchor__icon
+                  svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+                    path(d='M15.75 15.75V18M8.25 11.25H8.2575V11.2575H8.25V11.25ZM8.25 13.5H8.2575V13.5075H8.25V13.5ZM8.25 15.75H8.2575V15.7575H8.25V15.75ZM8.25 18H8.2575V18.0075H8.25V18ZM10.7476 11.25H10.7551V11.2575H10.7476V11.25ZM10.7476 13.5H10.7551V13.5075H10.7476V13.5ZM10.7476 15.75H10.7551V15.7575H10.7476V15.75ZM10.7476 18H10.7551V18.0075H10.7476V18ZM13.2524 11.25H13.2599V11.2575H13.2524V11.25ZM13.2524 13.5H13.2599V13.5075H13.2524V13.5ZM13.2524 15.75H13.2599V15.7575H13.2524V15.75ZM13.2524 18H13.2599V18.0075H13.2524V18ZM15.75 11.25H15.7575V11.2575H15.75V11.25ZM15.75 13.5H15.7575V13.5075H15.75V13.5ZM8.25 6H15.75V8.25H8.25V6ZM12 2.25C10.108 2.25 8.24156 2.35947 6.40668 2.57241C5.30608 2.70014 4.5 3.649 4.5 4.75699V19.5C4.5 20.7426 5.50736 21.75 6.75 21.75H17.25C18.4926 21.75 19.5 20.7426 19.5 19.5V4.75699C19.5 3.649 18.6939 2.70014 17.5933 2.57241C15.7584 2.35947 13.892 2.25 12 2.25Z', stroke='#0F172A', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                span.p-anchor__text Dịch vụ làm sổ sách kế toán
+            li.p-anchor__item
+              a.p-anchor__link.js-anchor-link(href='#dich-vu-bao-hiem-xa-hoi')
+                i.p-anchor__icon
+                  svg(xmlns='http://www.w3.org/2000/svg', width='20', height='18', viewBox='0 0 20 18', fill='none')
+                    path(d='M19 5.25C19 2.76472 16.9013 0.75 14.3125 0.75C12.3769 0.75 10.7153 1.87628 10 3.48342C9.28472 1.87628 7.62312 0.75 5.6875 0.75C3.09867 0.75 1 2.76472 1 5.25C1 12.4706 10 17.25 10 17.25C10 17.25 19 12.4706 19 5.25Z', stroke='#0F172A', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                span.p-anchor__text Dịch vụ bảo hiểm xã hội
+            li.p-anchor__item
+              a.p-anchor__link.js-anchor-link(href='#dich-vu-chu-ky-so')
+                i.p-anchor__icon
+                  svg(xmlns='http://www.w3.org/2000/svg', width='18', height='24', viewBox='0 0 18 24', fill='none')
+                    path(d='M7.05001 4.575C7.05001 3.70515 6.34486 3 5.47501 3C4.60516 3 3.90001 3.70515 3.90001 4.575L3.9 7.575M7.05001 4.575L7.05002 3.075C7.05002 2.20515 7.75517 1.5 8.62502 1.5C9.49487 1.5 10.2 2.20515 10.2 3.075L10.2 4.575M7.05001 4.575L7.125 10.5M10.2 11.25V4.575M10.2 4.575C10.2 3.70515 10.9052 3 11.775 3C12.6449 3 13.35 3.70515 13.35 4.575V15M3.9 7.575C3.9 6.70515 3.19485 6 2.325 6C1.45515 6 0.75 6.70515 0.75 7.575V15.75C0.75 19.4779 3.77208 22.5 7.5 22.5H9.51788C10.9103 22.5 12.2456 21.9469 13.2302 20.9623L14.9623 19.2302C15.9469 18.2456 16.5 16.9103 16.5 15.5179L16.5031 13.494C16.5046 13.3209 16.5701 13.1533 16.7007 13.0227C17.3158 12.4076 17.3158 11.4104 16.7007 10.7953C16.0857 10.1802 15.0884 10.1802 14.4733 10.7953C13.7315 11.5371 13.3578 12.5111 13.3531 13.4815M3.9 7.575V12M10.17 16.318C10.5599 15.9281 11.0035 15.6248 11.477 15.4079C12.0701 15.1362 12.71 15.0003 13.35 15M13.3519 15H13.35', stroke='#0F172A', stroke-width='1.5', stroke-linecap='round', stroke-linejoin='round')
+                span.p-anchor__text Dịch vụ chữ ký số
+      .c-collapse
+        .l-container
+          .c-collapse__wrapper
+            #dich-vu-bao-cao-thue.c-collapse__item
+              .c-collapse__wrap.c-collapse__wrap--question.is-collapsed.js-toggle-collapse
+                .c-collapse__left.c-collapse__left--question
+                  figure
+                    img(data-lazy='/images/ico_collapse_question.svg', alt='', src='/images/ico_collapse_question.svg')
+                .c-collapse__right.c-collapse__right--question Dịch vụ báo cáo thuế.
+                .c-collapse__icon
+              .c-collapse__answer
+                .c-collapse__wrap.c-collapse__wrap--answer
+                  .c-collapse__left.c-collapse__left--answer(data-media='pc')
+                    figure
+                      img(data-lazy='/images/ico_collapse_answer.svg', alt='', src='/images/ico_collapse_answer.svg')
+                  .c-collapse__right.c-collapse__right--answer
+                    ul.c-collapse__answer-list.c-collapse__answer-list--quote
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Kiểm tra, rà soát, đối chiếu tờ khai thuế hàng tháng với chứng từ gốc (hóa đơn đầu ra, đầu vào…), thực hiện điều chỉnh ngay nếu phát hiện có sai sót về hóa đơn giả, hóa đơn khống hay lỗi do kê khai sai sót.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tổ chức sắp xếp hoàn thiện và phân loại chứng từ trước khi lên các sổ sách(sổ chi tiết, tổng hợp, các bảng phân bổ…) và Báo cáo tài chính.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hoàn thiện chứng từ cần thiết: Phiếu thu – chi, phiếu nhập – xuất…
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Thông báo cho doanh nghiệp kịp thời các vấn đề về quỹ tiền mặt, ngân hàng, hàng tồn kho, công nợ, chi phí các loại….
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn các chính sách, văn bản về thuế, kế toán và các vấn đề xử phạt thuế khi làm sai để doạnh nghiệp nắm bắt.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Chỉ ra cho doanh nghiệp những vấn đề tồn đọng trong các vấn đề về kế tóa tài chính năm qua và đưa ra các giải pháp khắc phục.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Cân đối lãi lỗ, tư vấn các vấn rủi ro cho doanh nghiệp.
+                        ul.c-collapse__answer-list.c-collapse__answer-list--child
+                          li.c-collapse__answer-item.c-collapse__answer-item--child
+                            p.c-collapse__answer-text Cân đối doanh thu chi phí.
+                          li.c-collapse__answer-item.c-collapse__answer-item--child
+                            p.c-collapse__answer-text Cân đối các khoản thuế(GTGT, TNDN, TNCN…).
+                          li.c-collapse__answer-item.c-collapse__answer-item--child
+                            p.c-collapse__answer-text Cân đối hàng hóa, chi phí, lợi nhuận.
+                          li.c-collapse__answer-item.c-collapse__answer-item--child
+                            p.c-collapse__answer-text Cân đối dòng tiền cho doanh nghiệp.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Chốt số liệu, lập các báo cáo tài chính hoàn chỉnh.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text In sổ sách, chứng từ bàn giao đầy đủ cho doanh nghiệp.
+            #dich-vu-quyet-toan-thue.c-collapse__item
+              .c-collapse__wrap.c-collapse__wrap--question.is-collapsed.js-toggle-collapse
+                .c-collapse__left.c-collapse__left--question
+                  figure
+                    img(data-lazy='/images/ico_collapse_question.svg', alt='', src='/images/ico_collapse_question.svg')
+                .c-collapse__right.c-collapse__right--question  Dịch vụ quyết toán thuế.
+                .c-collapse__icon
+              .c-collapse__answer
+                .c-collapse__wrap.c-collapse__wrap--answer
+                  .c-collapse__left.c-collapse__left--answer(data-media='pc')
+                    figure
+                      img(data-lazy='/images/ico_collapse_answer.svg', alt='', src='/images/ico_collapse_answer.svg')
+                  .c-collapse__right.c-collapse__right--answer
+                    ul.c-collapse__answer-list.c-collapse__answer-list--quote
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Thu thập thông tin là các hóa đơn, chứng từ, sổ sách của doanh nghiệp.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Khảo sát thực tế quy trình hoạt động của doanh nghiệp.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Kiểm tra chứng từ kế toán, phân loại và sắp xếp chứng từ kế toán.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Nhập lại số liệu kế toán của cả năm, phân bổ hạch toán theo đúng chuẩn mực và Lập toàn bộ hệ thống sổ sách kế toán.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Kiểm tra, xử lý, hoàn thiện hệ thống SSKT đảm bảo quyết toán thuế: Rà soát, lập lại hệ thống các loại sổ chi tiết, sổ cái các tài khoản, sổ nhật ký chung.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Thiết lập lại số sách kế toán, báo cáo thuế theo đúng quy định của các luật thuế.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Loại bỏ, điều chỉnh, chỉnh sửa các chứng từ không phù hợp đồng thời trao đổi với doanh nghiệp các nội dung, nghiệp vụ có liên quan đến kết quả thực hiện.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn cho doanh nghiệp các nội dung có liên quan trong quá trình tổng hợp thông tin để lập quyết toán thuế...
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Đại diện cho Doanh nghiệp để làm việc với Cơ Quan Thuế, giải trình hợp lý tất cả các vấn đề mà Cơ Quan Thuế yêu cầu giải trình.
+            #dich-vu-bao-cao-tai-chinh.c-collapse__item
+              .c-collapse__wrap.c-collapse__wrap--question.js-toggle-collapse.is-collapsed
+                .c-collapse__left.c-collapse__left--question
+                  figure
+                    img(data-lazy='/images/ico_collapse_question.svg', alt='', src='/images/ico_collapse_question.svg')
+                .c-collapse__right.c-collapse__right--question Dịch vụ báo cáo tài chính.
+                .c-collapse__icon
+              .c-collapse__answer
+                .c-collapse__wrap.c-collapse__wrap--answer
+                  .c-collapse__left.c-collapse__left--answer(data-media='pc')
+                    figure
+                      img(data-lazy='/images/ico_collapse_answer.svg', alt='', src='/images/ico_collapse_answer.svg')
+                  .c-collapse__right.c-collapse__right--answer
+                    ul.c-collapse__answer-list.c-collapse__answer-list--quote
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Kiểm tra, rà soát, đối chiếu tờ khai thuế hàng tháng với chứng từ gốc (hóa đơn đầu ra, đầu vào…), thực hiện điều chỉnh ngay nếu phát hiện có sai sót về hóa đơn giả, hóa đơn khống hay lỗi do kê khai sai sót.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tổ chức sắp xếp hoàn thiện và phân loại chứng từ trước khi lên các sổ sách(sổ chi tiết, tổng hợp, các bảng phân bổ…) và Báo cáo tài chính.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hoàn thiện chứng từ cần thiết: Phiếu thu – chi, phiếu nhập – xuất…
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Thông báo cho doanh nghiệp kịp thời các vấn đề về quỹ tiền mặt, ngân hàng, hàng tồn kho, công nợ, chi phí các loại….
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn các chính sách, văn bản về thuế, kế toán và các vấn đề xử phạt thuế khi làm sai để doạnh nghiệp nắm bắt.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Chỉ ra cho doanh nghiệp những vấn đề tồn đọng trong các vấn đề về kế tóa tài chính năm qua và đưa ra các giải pháp khắc phục
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Cân đối lãi lỗ, tư vấn các vấn rủi ro cho doanh nghiệp
+                        ul.c-collapse__answer-list.c-collapse__answer-list--child
+                          li.c-collapse__answer-item.c-collapse__answer-item--child
+                            p.c-collapse__answer-text Cân đối doanh thu chi phí.
+                          li.c-collapse__answer-item.c-collapse__answer-item--child
+                            p.c-collapse__answer-text Cân đối các khoản thuế(GTGT, TNDN, TNCN…).
+                          li.c-collapse__answer-item.c-collapse__answer-item--child
+                            p.c-collapse__answer-text Cân đối hàng hóa, chi phí, lợi nhuận.
+                          li.c-collapse__answer-item.c-collapse__answer-item--child
+                            p.c-collapse__answer-text Cân đối dòng tiền cho doanh nghiệp.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Chốt số liệu, lập các báo cáo tài chính hoàn chỉnh.
+                        ul.c-collapse__answer-list.c-collapse__answer-list--child
+                          li.c-collapse__answer-item.c-collapse__answer-item--child
+                            p.c-collapse__answer-text Bộ báo cáo tài chính.
+                          li.c-collapse__answer-item.c-collapse__answer-item--child
+                            p.c-collapse__answer-text Quyết toán thuế TNDN.
+                          li.c-collapse__answer-item.c-collapse__answer-item--child
+                            p.c-collapse__answer-text Quyết toán thuế TNCN…
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text In sổ sách, chứng từ bàn giao đầy đủ cho doanh nghiệp.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Sau khi khảo sát hồ sơ tại doanh nghiệp, chúng tôi sẽ gửi danh mục công việc cần thực hiện cụ thể và báo giá đến Quý khách hàng
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Đồng thời trong quá trình thực hiện , chúng tôi sẽ tư vấn cho quý công ty các nội nội dung và vấn đề liên quan đến kế toán , luật thuế và hóa đơn chứng từ trong hoạt động kinh doanh.
+            #dich-vu-thanh-lap-cong-ty.c-collapse__item
+              .c-collapse__wrap.c-collapse__wrap--question.js-toggle-collapse.is-collapsed
+                .c-collapse__left.c-collapse__left--question
+                  figure
+                    img(data-lazy='/images/ico_collapse_question.svg', alt='', src='/images/ico_collapse_question.svg')
+                .c-collapse__right.c-collapse__right--question Dịch vụ thành lập công ty.
+                .c-collapse__icon
+              .c-collapse__answer
+                .c-collapse__wrap.c-collapse__wrap--answer
+                  .c-collapse__left.c-collapse__left--answer(data-media='pc')
+                    figure
+                      img(data-lazy='/images/ico_collapse_answer.svg', alt='', src='/images/ico_collapse_answer.svg')
+                  .c-collapse__right.c-collapse__right--answer
+                    ul.c-collapse__answer-list.c-collapse__answer-list--quote
+                      li.c-collapse__answer-item.c-collapse__answer-item--number
+                        strong.c-collapse__answer-number 1. Tư vấn trước khi thành lập công ty :
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn lựa chọn loại hình công ty (Công ty Trách nhiệm hữu hạn, công ty cổ phần, công ty có vốn đầu tư nước ngòai…);
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn tên công ty (Lựa chọn tên và tra cứu tên) ;
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn trụ sở công ty (Trụ sở đi thuê hoặc thuộc quyền sử dụng hợp pháp của Công ty) ;
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn đăng ký vốn điều lệ (Phù hợp với từng ngành nghề kinh doanh và loại hình doanh nghiệp) ;
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn lựa chọn ngành nghề kinh doanh (Theo hệ thống ngành nghề kinh tế quốc dân) ;
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn về người sáng lập của công ty (Phù hợp với quy định của pháp luật hiện hành) ;
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn thủ tục và các vấn đề liên quan đến nội bộ doanh nghiệp (Tư vấn tổ chức bộ máy và hoạt động của công ty) ;
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Lập hồ sơ thành lập công ty (Chuẩn hóa hồ sơ theo yêu cầu : Đơn đăng ký kinh doanh, điều lệ công ty, danh sách cổ đông và các tài liệu khác theo quy định của pháp luật) ;
+                      li.c-collapse__answer-item.c-collapse__answer-item--number
+                        strong.c-collapse__answer-number 2. Thực hiện các công việc theo ủy quyền:
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Đại diện cho khách hàng nộp, rút, nhận hồ sơ đăng ký kinh doanh tại Phòng đăng ký kinh doanh;
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tiến hành thủ tục để khắc dấu cho Công ty (dấu công ty, dấu chức danh, dấu đăng ký mã số thuế);
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tiến hành thủ tục đăng ký mã số thuế và chức năng xuất nhập khẩu cho doanh nghiệp.
+                      li.c-collapse__answer-item.c-collapse__answer-item--number
+                        strong.c-collapse__answer-number 3. Thời gian hoàn thiện thủ tục đăng ký thành lập công ty :
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Theo quy định của pháp luật thời gian cấp giấy chứng nhận đăng ký kinh doanh và dấu pháp nhân đối với công ty là: 10 ngày làm việc kể từ ngày nộp đủ chứng từ hồ sơ theo quy định của pháp luật. Tuy nhiên, nhằm đáp ứng tốt nhất yêu cầu của Quý khách hàng về việc nhanh chóng thành lập doanh nghiệp tận dụng tốt nhất thời cơ kinh doanh.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Chúng tôi có thể hoàn thiện mọi thủ tục trên trong thời hạn 2-3 ngày làm việc kể từ ngày Quý khách hàng cung cấp đầy đủ hồ sơ với mức chi phí cạnh tranh.
+                      li.c-collapse__answer-item.c-collapse__answer-item--number
+                        strong.c-collapse__answer-number 4. Hoạt động tư vấn, trợ giúp khách hàng sau thành lập công ty :
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn khởi nghiệp (Các công việc cần làm của một doanh nghiệp mới, bước đầu xây dựng thương hiệu thống nhất…)
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn hoạt động của doanh nghiệp (qua email, thư, fax);
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Cung cấp văn bản pháp luật theo yêu cầu (qua email);
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Soạn thảo hồ sơ nội bộ của doanh nghiệp, gồm: Điều lệ, Biên bản góp vốn thành lập công ty, bầu chủ tịch, cử người đại diện theo pháp luật, Quyết định bổ nhiệm giám đốc, Quyết định bổ nhiệm kế toán trưởng, Chứng nhận sở hữu cổ phần, Sổ cổ đông, Thông báo lập sổ cổ đông…
+                      li.c-collapse__answer-item.c-collapse__answer-item--number
+                        strong.c-collapse__answer-number 5. Cơ sở pháp lý của thủ tục đăng ký thành lập công ty :
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Luật doanh nghiệp số 60/2005/QH11;
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Nghị định số 43/2010/NÐ-CP về đăng ký doanh nghiệp;
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Thông tư số 14/2010/TT-BKH quy định về hồ sơ, trình tự, thủ tục đăng ký doanh nghiệp;
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Quyết định 10/2007/QĐ-TTg ban hành hệ thống ngành kinh tế của Việt Nam;
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Quyết định số 337/QĐ-BKH về việc ban hành quy định nội dung Hệ thống ngành kinh tế của Việt Nam;
+            #dich-vu-lam-so-sach-ke-toan.c-collapse__item
+              .c-collapse__wrap.c-collapse__wrap--question.js-toggle-collapse.is-collapsed
+                .c-collapse__left.c-collapse__left--question
+                  figure
+                    img(data-lazy='/images/ico_collapse_question.svg', alt='', src='/images/ico_collapse_question.svg')
+                .c-collapse__right.c-collapse__right--question Dịch vụ làm sổ sách kế toán.
+                .c-collapse__icon
+              .c-collapse__answer
+                .c-collapse__wrap.c-collapse__wrap--answer
+                  .c-collapse__left.c-collapse__left--answer(data-media='pc')
+                    figure
+                      img(data-lazy='/images/ico_collapse_answer.svg', alt='', src='/images/ico_collapse_answer.svg')
+                  .c-collapse__right.c-collapse__right--answer
+                    ul.c-collapse__answer-list.c-collapse__answer-list--quote
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Nhận chứng từ, sổ sách của DN để thực hiện và xử lý công việc
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Thiết lập và xây dựng hệ thống sổ sách kế toán ban đầu.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Khai thuế môn bài hàng năm.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Lập các báo cáo thuế gửi cho cơ quan thuế hàng tháng theo quy định.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Kiểm tra các chứng từ đầu vào, đầu ra cho phù hợp với quy định của pháp luật.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Phân loại, sắp xếp, đóng chứng từ kế toán.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Thực hiện hạch toán và ghi sổ kế toán các chứng từ, các giao dịch theo quy định.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Cân đối kế toán, kết quả kinh doanh, lưu chuyển tiền tệ …
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Lập báo cáo tài chính cuối năm.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Lập báo cáo quyết toán thuế thu nhập doanh nghiệp hàng năm.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Lập báo cáo quyết toán thuế thu nhập cá nhân.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hoàn thiện hệ thống chứng từ cho công ty.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Đại diện cho Doanh nghiệp làm việc với cơ quan thuế chủ quản.
+            #dich-vu-thanh-lap-cong-ty.c-collapse__item
+              .c-collapse__wrap.c-collapse__wrap--question.js-toggle-collapse.is-collapsed
+                .c-collapse__left.c-collapse__left--question
+                  figure
+                    img(data-lazy='/images/ico_collapse_question.svg', alt='', src='/images/ico_collapse_question.svg')
+                .c-collapse__right.c-collapse__right--question Dịch vụ làm BHXH - BHYT.
+                .c-collapse__icon
+              .c-collapse__answer
+                .c-collapse__wrap.c-collapse__wrap--answer
+                  .c-collapse__left.c-collapse__left--answer(data-media='pc')
+                    figure
+                      img(data-lazy='/images/ico_collapse_answer.svg', alt='', src='/images/ico_collapse_answer.svg')
+                  .c-collapse__right.c-collapse__right--answer
+                    ul.c-collapse__answer-list.c-collapse__answer-list--quote
+                      li.c-collapse__answer-item.c-collapse__answer-item--number
+                        strong.c-collapse__answer-number 1. Dịch vụ đăng ký lao động trọn gói :
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Đăng ký khai trình sử dụng lao động với cơ quan lao động
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Làm hồ sơ xác nhận chưa đủ điều kiện thành lập công đoàn hoặc hồ sơ thành lập công đoàn.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Soạn thảo và đăng ký Nội quy lao động, Thỏa ước lao động tập thể theo Bộ luật Lao động.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Xây dựng tiêu chuẩn và bảng mô tả chức danh công việc.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Xây dựng và đăng ký hệ thống thang lương, bảng lương với cơ quan nhà nước.
+                      li.c-collapse__answer-item.c-collapse__answer-item--number
+                        strong.c-collapse__answer-number 2. Dịch vụ làm bảo hiểm, làm hồ sơ BHXH lần đầu trọn gói:
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Soạn thảo hồ sơ và thực hiện đăng ký Bảo hiểm xã hội
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hồ sơ Bảo Hiểm Y Tế
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hồ sơ Bảo Hiểm Thất Nghiệp
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Soạn thảo hợp đồng lao động, bảng lương. Đồng thời giải trình không bị truy thu đối với những công ty đã thành lập từ lâu hoặc truy thu theo yêu cầu của Quý Doanh nghiệp.
+                      li.c-collapse__answer-item.c-collapse__answer-item--number
+                        strong.c-collapse__answer-number 3. Dịch vụ theo dõi BHXH, BHYTm BHTN hàng tháng :
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hồ tăng giảm lao động, chốt sổ BHXH.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hồ sơ điều chỉnh lương, điều chỉnh thông tin cá nhân.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hồ sơ giải quyết chế độ ốm đau, thai sản, nghỉ dưỡng sức và hồ sơ tai nạn lao động.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hồ sơ cấp sổ BHXH khi bị mất hoặc hư hỏng.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hồ sơ gộp sổ khi phát hiện người lao động có nhiểu sổ BHXH.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Đối chiếu và thông báo số tiền bảo hiểm phải nộp hàng tháng.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Gia hạn thẻ bảo hiểm y tế
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hồ sơ tiếp đoàn kiểm tra Doanh nghiệp của BHXH, Liên đoàn, UBND và Thanh tra Sở LĐ TB&XH
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Bàn giao các số liệu khi có yêu cầu
+                      li.c-collapse__answer-item.c-collapse__answer-item--number
+                        strong.c-collapse__answer-number 4. Dịch vụ theo dõi hồ sơ lao động hàng tháng :
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Lập các báo cáo khai trình lao động khi có tăng giảm lao động với cơ quan lao động.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Báo cáo lao động định kỳ hàng quý và hàng năm.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Xây dựng nội quy lao động, hệ thống thang bảng lương hàng năm.
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Xây dựng thỏa ước lao động tập thể (nếu phát sinh)
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Tư vấn các vấn đề liên quan đến Luật Lao động, Luật BHXH, BHYT, BHTN và các nghị định của Chính phủ về lao động và tiền lương
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Biên soạn các loại hợp đồng lao động
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Chuẩn bị hồ sơ lao động cho các Doanh nghiệp khi có văn bản thông báo kiểm tra Doanh nghiệp và cùng Doanh nghiệp tiếp đoàn kiểm tra nhằm hạn chế tối đa Doanh nghiệp không bị xử phạt vi phạm hành chính trong các lĩnh vực
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Hồ sơ tranh chấp lao động (nếu có)
+            #dich-vu-chu-ky-so.c-collapse__item
+              .c-collapse__wrap.c-collapse__wrap--question.js-toggle-collapse.is-collapsed
+                .c-collapse__left.c-collapse__left--question
+                  figure
+                    img(data-lazy='/images/ico_collapse_question.svg', alt='', src='/images/ico_collapse_question.svg')
+                .c-collapse__right.c-collapse__right--question Dịch vụ chữ ký số.
+                .c-collapse__icon
+              .c-collapse__answer
+                .c-collapse__wrap.c-collapse__wrap--answer
+                  .c-collapse__left.c-collapse__left--answer(data-media='pc')
+                    figure
+                      img(data-lazy='/images/ico_collapse_answer.svg', alt='', src='/images/ico_collapse_answer.svg')
+                  .c-collapse__right.c-collapse__right--answer
+                    ul.c-collapse__answer-list.c-collapse__answer-list--quote
+                      li.c-collapse__answer-item.c-collapse__answer-item--text
+                        strong.c-collapse__answer-number Bảng giã chữ ký số VIETTEL-CA (TỪ THÁNG 10/2022)
+                      li.c-collapse__answer-item
+                        p.c-collapse__answer-text Quý công ty có như cầu đăng ký mới hoặc gia hạn chữ ký số, xin vui lòng tham khảo giá bên dưới và vui lòng liên hệ để biết thêm thông tin chính xác. Xin cảm ơn.
+                      li.c-collapse__answer-item.c-collapse__answer-item--inc-table
+                        table.c-table
+                          tbody
+                            tr
+                              td(colspan='3', rowspan='2')
+                                .c-table__heading
+                                  h5.c-table__title Bảng giá gia hạn chữ ký số Viettel - CA
+                                  p.c-table__sub-title (Giá đã bao gồm 10% VAT)
+                            tr
+                            tr
+                              td
+                                p
+                                  strong Thời gian gia hạn
+                              td
+                                p
+                                  strong Giá bán
+                              td
+                                p
+                                  strong Giá trên hóa đơn
+                            tr
+                              td
+                                p 1 năm
+                              td
+                                p 900.000 đ
+                              td
+                                p 1.276.000 đ
+                            tr
+                              td
+                                p 2 năm
+                              td
+                                p 1.300.000 đ
+                              td
+                                p 2.191.000 đ
+                            tr
+                              td
+                                p 3 năm
+                              td
+                                p 1.500.000 đ
+                              td
+                                p 2.909.000 đ
+                      li.c-collapse__answer-item.c-collapse__answer-item--inc-table
+                        table.c-table
+                          tbody
+                            tr
+                              td(colspan='4', rowspan='2')
+                                .c-table__heading
+                                  h5.c-table__title Bảng giá đăng ký mới chữ ký số Viettel - CA
+                                  p.c-table__sub-title (Giá đã bao gồm 10% VAT)
+                            tr
+                            tr
+                              td
+                                p
+                                  strong Tên gói/thời gian sử dụng
+                              td
+                                p
+                                  strong Giá bán
+                              td
+                                p
+                                  strong Giá trên hóa đơn
+                              td
+                                p
+                                  strong Tặng kèm
+                            tr
+                              td
+                                p CA 2-1/1 năm
+                              td
+                                p 1.350.000 đ
+                              td
+                                p 1.826.000 đ
+                              td
+                                p Thiết bị CKS
+                            tr
+                              td
+                                p CA 2-2/2 năm
+                              td
+                                p 1.900.000 đ
+                              td
+                                p 2.741.000 đ
+                              td
+                                p Thiết bị CKS
+                            tr
+                              td
+                                p CA 2-3/3 năm
+                              td
+                                p 2.100.000 đ
+                              td
+                                p 3.109.000 đ
+                              td
+                                p Thiết bị CKS

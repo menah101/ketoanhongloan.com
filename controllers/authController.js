@@ -55,7 +55,7 @@ exports.login = catchAsync(async (req, res, next) => {
   const user = await User.findOne({ email }).select('+password');
 
   if (!user || !(await user.correctPassword(password, user.password))) {
-    return next(new AppError('Incorrect email or password', 401));
+    return next(new AppError('Email hoặc mật khẩu không chính xác.', 401));
   }
 
   // 3) If everything ok, send token to client
@@ -120,6 +120,7 @@ exports.isLoggedIn = async (req, res, next) => {
   if (req.cookies.jwt) {
     try {
       // 1) verify token
+      console.log('object');
       const decoded = await promisify(jwt.verify)(
         req.cookies.jwt,
         process.env.JWT_SECRET
@@ -160,7 +161,6 @@ exports.restrictTo = (...roles) => {
 };
 
 exports.updatePassword = catchAsync(async (req, res, next) => {
-  console.log('hello');
   // 1) Get user from collection
   const user = await User.findById(req.user.id).select('+password');
 

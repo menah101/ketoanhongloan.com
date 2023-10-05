@@ -1,0 +1,113 @@
+extends base
+
+block content
+  main
+    .c-breadcrumb
+      .l-container
+        .c-breadcrumb__content
+          ul.c-breadcrumb__list
+            li.c-breadcrumb__item
+              a.c-breadcrumb__link.c-breadcrumb__link--home(href='/')
+                i.c-breadcrumb__icon
+                  svg.w-6.h-6(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', stroke-width='1.5', stroke='currentColor')
+                    path(stroke-linecap='round', stroke-linejoin='round', d='M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25')
+                span Trang chủ
+            li.c-breadcrumb__item
+              span.c-breadcrumb__link Giới thiệu
+    .p-information
+      .l-container
+        .p-information__inner
+          p.p-information__text Blog chia sẽ những kiến thức và giải pháp kế toán cho các doanh nghiệp 🥳
+      
+    .p-about
+      .l-container
+        .p-about__warpper
+          .p-about__information
+            figure.p-about__figure
+              img.p-about__img(src='/images/avatar_hong_loan_lager.jpg', alt='Kế toán Hồng Loan')
+            .p-about__content
+              .p-about__name Hồng Loan
+              .p-about__email hongloan.kt12@gmail.com
+          .p-about__history
+            .p-about__history-wrap
+              .c-collapse__right.c-collapse__right--answer
+                ul.c-collapse__answer-list.c-collapse__answer-list--quote
+                  li.c-collapse__answer-item
+                    p.c-collapse__answer-text Bản thân là người hòa đồng, vui vẻ, hoạt bát. Trong công việc luôn cẩn thận, chính xác, rõ ràng
+                  li.c-collapse__answer-item
+                    p.c-collapse__answer-text Có trách nhiệm cao trong công việc.
+                  li.c-collapse__answer-item
+                    p.c-collapse__answer-text Tinh thần cầu tiến, sáng tạo, ham học hỏi, nhanh chóng thích nghi với môi trường mới.
+              ul.p-about__history-list
+                li.p-about__history-item
+                  h2.p-about__history-year Trình độ học vấn
+                  .p-about__history-month
+                    .p-about__history-dot
+                    .p-about__history-content
+                      .p-about__history-month-num Tháng 09/2018
+                      .p-about__history-month-text 
+                        | Trung Tâm Tư Vấn Đào Tạo Kinh Tế Toàn Cầu
+                        br
+                        | Khóa học Bồi dưỡng kế toán trưởng - Chứng chỉ loại giỏi
+                  .p-about__history-month.p-about__history-month--01
+                    .p-about__history-dot
+                    .p-about__history-content
+                      .p-about__history-month-num Từ 2012 - 2016
+                      .p-about__history-month-text
+                        |  Đại Học Tài Chính - Marketing
+                        br
+                        | Khoa Kế Toán – Kiểm Toán (Chuyên ngành: Kế toán doanh nghiệp)
+                li.p-about__history-item
+                  h2.p-about__history-year Kỹ năng công việc
+                  .p-about__history-month
+                    .p-about__history-dot
+                    .p-about__history-content
+                      .p-about__history-month-num Sử dụng thành thạo Word, Excel để phục vụ cho công việc.
+                  .p-about__history-month
+                    .p-about__history-dot
+                    .p-about__history-content
+                      .p-about__history-month-num Sử dụng thành thạo các phần mềm kế toán: Bingo, Smart, Misa (khá).
+                  .p-about__history-month
+                    .p-about__history-dot
+                    .p-about__history-content
+                      .p-about__history-month-num Sử dụng thành thạo các phần mềm thuế: HTKK, QT TNCN.
+                li.p-about__history-item
+                  h2.p-about__history-year Kinh nghiệm làm việc
+                  .p-about__history-month.p-about__history-month--01
+                    .p-about__history-dot
+                    .p-about__history-content
+                      .p-about__history-month-num Kế toán thuế (Từ tháng 08/2016 - tháng 05/2019)
+                      .p-about__history-month-text
+                        | - Kế toán thuế tại Công Ty Cổ Phần Tư Vấn Trí Luật
+                        br
+                        | - Hàng tháng thu thập chứng từ, hóa đơn GTGT từ khách hàng. Kiểm tra và đảm bảo tính pháp lý, hợp lý, chính xác của chứng từ.
+                        br
+                        | - Cân đối thuế GTGT, cân đối doanh thu chi phí => báo cáo kịp thời các vấn đề cho khách hàng.
+                        br
+                        | - Tư vấn các chính sách mới nhất, nhanh chóng, kịp thời đến khách hàng để khách hàng nắm rõ hơn.
+                        br
+                        | - Trực tiếp thực hiện và nộp tờ khai thuế hàng tháng/quý cho cơ quan thuế: Báo cáo thuế GTGT, TNCN,TNDN, Báo cáo tình hình sử dụng hóa đơn.
+                        br
+                        | - Hạch toán các nghiệp vụ thuế, hoàn thiện chứng từ, sổ sách hợp lý hợp lệ.
+                        br
+                        | - Báo cáo quyết toán năm (BCTC, TNDN, TNCN).
+                        br
+                        | - Báo cáo thống kê hàng tháng/quý/năm.
+                        br
+                        | - Thường xuyên ngoại giao, chuẩn bị tất cả các giấy tờ, tài liệu liên quan, để làm việc với thuế và các cơ quan ban ngành có liên quan.
+                  .p-about__history-month.p-about__history-month--04
+                    .p-about__history-dot
+                    .p-about__history-content
+                      .p-about__history-month-num Kế toán nội bộ (Từ tháng 03/2016 - tháng 06/2016)
+                      .p-about__history-month-text
+                        | - Kế toán nội bộ tại Công Ty TNHH SX TM Inox Minh Đại Phú.
+                        br
+                        | - Theo dõi và xử lý đơn hàng thương mại và các đơn gia công.
+                        br
+                        | - Theo dõi nhập xuất tồn hàng hóa trong kho.
+                        br
+                        | - Kiểm tra hàng hóa nhập khẩu về kho, thường xuyên kiểm tra hàng tồn.
+                        br
+                        | - Theo dõi thu chi tiền tại kho.
+                        br
+                        | - Lập báo cáo công việc theo chỉ đạo của Giám đốc.

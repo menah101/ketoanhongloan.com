@@ -1,1 +1,17 @@
-h1 Header
+header.l-header
+  .l-container
+    .l-header__inner
+      .p-header-logo
+        a(href='/')
+          figure.p-header-logo__figure
+            img.p-header-logo__img(src='/images/avatar_hong_loan_small.jpg' alt='Hồng Loan')
+      nav.p-header-menu
+        ul.p-header-menu__list
+          li.p-header-menu__item.js-item-menu(data-menu='blog')
+            a.p-header-menu__link(href='/blog/') Blog
+          li.p-header-menu__item.js-item-menu(data-menu='service')
+            a.p-header-menu__link(href='/dich-vu-ke-toan/') Dịch vụ kế toán
+          li.p-header-menu__item.js-item-menu(data-menu='about')
+            a.p-header-menu__link(href='/me/') Về tôi
+          li.p-header-menu__item.js-item-menu(data-menu='admin')
+            a.p-header-menu__link(href='/admin/') Quản trị
