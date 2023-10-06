@@ -4,7 +4,9 @@ const authController = require('./../controllers/authController');
 const router = express.Router();
 
 // Client
-router.get('/', viewsController.getOverview);
+router.get('/',
+  viewsController.getOverview
+);
 router.get('/blog', viewsController.getBlog);
 router.get('/blog/:slug', viewsController.getBlogDetail);
 router.get('/dich-vu-ke-toan', viewsController.getAccountService);

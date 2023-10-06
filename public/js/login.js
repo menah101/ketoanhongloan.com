@@ -9,7 +9,6 @@ const login = async (email, password) => {
       }
     });
     
-    console.log(res);
     if (res.data.status === 'success') {
       alert('Đăng nhập thành công!')
       window.setTimeout(() => {
@@ -18,7 +17,6 @@ const login = async (email, password) => {
     }
   } catch (err) {
     alert(err.response.data.message);
-    console.log(err);
   }
 };
 
