@@ -20,7 +20,7 @@ const login = async (email, password) => {
   }
 };
 
-document.querySelector('.js-form').addEventListener('submit', e => {
+document.querySelector('.js-form')?.addEventListener('submit', e => {
   e.preventDefault();
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
