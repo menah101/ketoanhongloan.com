@@ -18,10 +18,11 @@ block content
                     th(class="c-datatable__title") Tag
                     th(class="c-datatable__title", style="width: 15%;") Hành động
                 tbody
-                  tr
-                    td
-                      p(class="c-datatable__text") 1
-                    td
-                      p(class="c-datatable__text") Row 1 Data 1
-                    td
-                      +ButtonAction('/admin/tag/edit')
+                  each tag, index in tags
+                    tr
+                      td
+                        p(class="c-datatable__text")= index + 1
+                      td
+                        p(class="c-datatable__text")= tag.name
+                      td
+                        +ButtonAction(`/admin/tag/edit/${tag._id}`, tag._id)

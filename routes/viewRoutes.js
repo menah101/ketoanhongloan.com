@@ -29,7 +29,7 @@ router.get('/admin/post/create',
   authController.restrictTo('admin'),
   viewsController.getAdminPostCreate
 );
-router.get('/admin/post/edit',
+router.get('/admin/post/edit/:id',
   authController.protect,
   authController.restrictTo('admin'),
   viewsController.getAdminPostEdit,
@@ -44,7 +44,7 @@ router.get('/admin/tag/create',
   authController.restrictTo('admin'),
   viewsController.getAdminTagCreate
 );
-router.get('/admin/tag/edit',
+router.get('/admin/tag/edit/:id',
   authController.protect,
   authController.restrictTo('admin'),
   viewsController.getAdminTagEdit

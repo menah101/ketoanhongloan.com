@@ -1,3 +1,5 @@
+const Tag = require('./../models/tagModel');
+const Post = require('./../models/postModel');
 const catchAsync = require('../utils/catchAsync');
 
 // -------- CLIENT -------- //
@@ -60,7 +62,8 @@ exports.getAdminPostEdit= catchAsync( async (req, res, next) => {
 
 // render admin (tag index)
 exports.getAdminTag= catchAsync( async (req, res, next) => {
-  res.status(200).render('admin/tag/index');
+  const tags = await Tag.find();
+  res.status(200).render('admin/tag/index', { tags });
 });
 
 // render admin (tag create)
@@ -70,6 +73,8 @@ exports.getAdminTagCreate= catchAsync( async (req, res, next) => {
 
 // render admin (tag edit)
 exports.getAdminTagEdit= catchAsync( async (req, res, next) => {
-  res.status(200).render('admin/tag/edit');
+  const id = req.params.id
+  const tag = await Tag.findById(id);
+  res.status(200).render('admin/tag/edit', { tag });
 });
 
