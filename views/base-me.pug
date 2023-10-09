@@ -1,0 +1,45 @@
+block mixins
+  include mixins
+
+doctype html
+html
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge')
+      meta(name='robots' content='index,follow')
+      meta(name='keywords' content='Dịch vụ kế toán trọn gói tphcm, dịch vụ báo cáo thuế, dịch vụ kế toán tại nhà, dịch vụ chữ ký số, dịch vụ bảo hiểm xã hội')
+      meta(name='description' content='Dịch vụ kế toán trọn gói tphcm, (báo cáo thuế), dịch vụ kế toán tại nhà chuyên nghiệp, uy tín. Kế toán Hồng Loan cam kết sẽ mang lại giá trị cho quý Doanh Nghiệp')
+      meta(property='og:image' content='https://ketoanhongloan.com/images/dich-vu-ke-toan-hong-loan.jpeg')
+      meta(property='og:description' content='Dịch vụ kế toán trọn gói tphcm, (báo cáo thuế), dịch vụ kế toán tại nhà chuyên nghiệp, uy tín. Kế toán Hồng Loan cam kết sẽ mang lại giá trị cho quý Doanh Nghiệp')
+      title Kế Toán Hồng Loan | Giải pháp kế toán cho Doanh Nghiệp
+      link(rel='shortcut icon' type='image/jpg' href='/images/favicon.jpg')
+      link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700')
+      link(rel='stylesheet' href='https://cdn.quilljs.com/1.3.6/quill.snow.css')
+      link(rel='stylesheet' href='/css/style.css')
+
+  body.js-body(data-active-menu='about')
+    // HEADER
+    include _header
+
+    // CONTENT
+    block content
+      h1 This is a placeholder heading
+
+    // CONTACT
+    include _contact 
+
+    // ZALO
+    include _zalo 
+
+    // GO TO TOP
+    include _go-to-top
+
+    // FOOTER
+    include _footer
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js')
+    script(src='/js/login.js')
+    script(src='/js/index.js')

@@ -52,7 +52,10 @@ exports.getAdminPost= catchAsync( async (req, res, next) => {
 
 // render admin (post create)
 exports.getAdminPostCreate= catchAsync( async (req, res, next) => {
-  res.status(200).render('admin/post/create');
+  const tags = await Tag.find();
+  res.status(200).render('admin/post/create', {
+    tags
+  });
 });
 
 // render admin (post edit)

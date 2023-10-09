@@ -32,7 +32,7 @@ exports.resizePostImages = catchAsync(async (req, res, next) => {
   // 1) Cover image
   req.body.thumbnail = `${filename}_${Date.now()}.${fileType}`;
   await sharp(req.files.thumbnail[0].buffer)
-    .toFile(`public/img/posts/${req.body.thumbnail}`);
+    .toFile(`public/images/posts/${req.body.thumbnail}`);
 
   next();
 });

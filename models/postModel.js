@@ -8,8 +8,8 @@ const postSchema = new mongoose.Schema(
       required: [true, 'A post must have a title'],
       unique: true,
       trim: true,
-      maxlength: [60, 'A tour name must have less or equal then 60 characters'],
-      minlength: [10, 'A tour name must have more or equal then 10 characters']
+      maxlength: [60, 'A post name must have less or equal then 60 characters'],
+      minlength: [10, 'A post name must have more or equal then 10 characters']
     },
     slug: String,
     description: {
@@ -20,7 +20,13 @@ const postSchema = new mongoose.Schema(
       type: String,
       required: [true, 'A post must have a meta description'],
       trim: true,
-      maxlength: [160, 'A tour meta description must have less or equal then 160 characters'],
+      maxlength: [160, 'A post meta description must have less or equal then 160 characters'],
+    },
+    metaKeywords: {
+      type: String,
+      required: [true, 'A post must have a meta keywords'],
+      trim: true,
+      maxlength: [160, 'A post meta keywords must have less or equal then 160 characters'],
     },
     thumbnail: {
       type: String,
@@ -32,12 +38,10 @@ const postSchema = new mongoose.Schema(
       type: mongoose.Schema.ObjectId,
       ref: 'User'
     },
-    tags: [
-      {
+    tag: {
         type: mongoose.Schema.ObjectId,
         ref: 'Tag'
-      }
-    ],
+    },
     views: {
       type: Number,
       default: 0
