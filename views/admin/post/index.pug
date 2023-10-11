@@ -17,18 +17,22 @@ block content
                     th(class="c-datatable__title", style="width: 15%;") Hình ảnh
                     th(class="c-datatable__title") Tiêu đề
                     th(class="c-datatable__title") Tag
+                    th(class="c-datatable__title") Tác giả
                     th(class="c-datatable__title", style="width: 15%;") Hành động
                 tbody
-                  tr
-                    td
-                      p(class="c-datatable__text") 1
-                    td
-                      div(class="c-datatable__thumb")
-                        img(src="https://placehold.jp/100x50.png", alt="alt")
-                    td
-                      p(class="c-datatable__text") Row 1 Data 1
-                    td
-                      p(class="c-datatable__text") Row 1 Data 1
-                    td
-                      +ButtonAction('/admin/post/edit')
+                  each post, index in posts
+                    tr
+                      td
+                        p(class="c-datatable__text")= index + 1
+                      td
+                        div(class="c-datatable__thumb")
+                          img(src=`/images/posts/${post.thumbnail}`, alt=`${post.title}`)
+                      td
+                        p(class="c-datatable__text")=post.title
+                      td
+                        p(class="c-datatable__text")=post.tag.name
+                      td
+                        p(class="c-datatable__text")=post.author.name
+                      td
+                        +ButtonAction(`/admin/post/edit/${post._id}`, post._id)
                         

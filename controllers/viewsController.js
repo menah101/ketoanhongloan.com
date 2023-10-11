@@ -47,9 +47,9 @@ exports.getDashboard= catchAsync( async (req, res, next) => {
 
 // render admin (post index)
 exports.getAdminPost= catchAsync( async (req, res, next) => {
-  res.status(200).render('admin/post/index');
+  const posts = await Post.find().populate({ path: 'tag author' });
+  res.status(200).render('admin/post/index', { posts });
 });
-
 // render admin (post create)
 exports.getAdminPostCreate= catchAsync( async (req, res, next) => {
   const tags = await Tag.find();
@@ -60,7 +60,13 @@ exports.getAdminPostCreate= catchAsync( async (req, res, next) => {
 
 // render admin (post edit)
 exports.getAdminPostEdit= catchAsync( async (req, res, next) => {
-  res.status(200).render('admin/post/edit');
+  const tags = await Tag.find();
+  const id = req.params.id
+  const post = await Post.findById(id);
+  res.status(200).render('admin/post/edit', {
+    tags,
+    post,
+  });
 });
 
 // render admin (tag index)

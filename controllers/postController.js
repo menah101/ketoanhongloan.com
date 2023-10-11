@@ -47,7 +47,7 @@ exports.getPostBySlug = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getAllPosts = factory.getAll(Post);
+exports.getAllPosts = factory.getAll(Post, { path: 'tag author' });
 exports.createPost = factory.createOne(Post);
 exports.updatePost = factory.updateOne(Post);
 exports.deletePost = factory.deleteOne(Post);

@@ -16,48 +16,125 @@ block content
                     path(stroke-linecap="round", stroke-linejoin="round", d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z")
                 span(class="p-category__sub") Cập nhật bài viết
             .p-form
-              form(class="p-form__form")
+              form(class="p-form__form js-form-post-edit")
                 div(class="p-form__form-column")
                   div(class="p-form__form-row")
                     div(class="p-form__form-group")
                       label(class="p-form__form-label") Tiêu đề:
-                      input(type="text", class="p-form__form-input", placeholder="nhập tiêu đề")
-                      div(class="p-form__form-error") Vui lòng nhập tiêu đề.
+                      input#postTitleEdit(type="text", value=post.title class="p-form__form-input", placeholder="nhập tiêu đề")
+                      input#postIdEdit(type="hidden", value=post._id)
+                      input#postAuthorEdit(type="hidden", value=user._id)
                   div(class="p-form__form-row")
                     div(class="p-form__form-group")
                       label(class="p-form__form-label") Tag:
-                      select(class="p-form__form-select")
+                      select#postTagEdit(class="p-form__form-select", value=post.tag)
                         option(selected) Chọn tag
-                        option(value="1") One
-                        option(value="2") Two
-                        option(value="3") Three
-                      div(class="p-form__form-error") Vui lòng chọn tag.
+                        each tag, index in tags
+                          option(value=`${tag._id}`, selected=post.tag==tag._id ? 'selected' : '')=tag.name
+                div(class="p-form__form-row")
+                    div(class="p-form__form-group")
+                      label(class="p-form__form-label") Slug:
+                      input#postSlugEdit(type="text", value=post.slug class="p-form__form-input", placeholder="nhập slug")
                 div(class="p-form__form-column")
                   div(class="p-form__form-row")
                     div(class="p-form__form-group")
                       label(class="p-form__form-label") Mô tả:
-                      textarea(class="p-form__form-textarea", rows="4")
-                      div(class="p-form__form-error") Vui lòng nhập mô tả.
+                      textarea#postDescriptionEdit(class="p-form__form-textarea", rows="4")=post.description
                   div(class="p-form__form-row")
                     div(class="p-form__form-group")
                       label(class="p-form__form-label") Mô tả(SEO):
-                      textarea(class="p-form__form-textarea", rows="4")
-                      div(class="p-form__form-error") Vui lòng nhập mô tả.
+                      textarea#postMetaDescriptionEdit(class="p-form__form-textarea", rows="4")=post.metaDescription
+                div(class="p-form__form-row")
+                  div(class="p-form__form-group")
+                    label(class="p-form__form-label") Từ khóa (SEO):
+                    textarea#postMetaKeywordsEdit(class="p-form__form-textarea", rows="4")=post.metaKeywords
                 div(class="p-form__form-row")
                   div(class="p-form__form-group")
                     label(class="p-form__form-label") Thumbnail:
                     input.js-upload-file(type="file")
-                    div(class="p-form__form-error") Vui lòng chọn hình ảnh.
                 div(class="p-form__form-row")
                   div(class="p-form__form-group")
                     figure(class="p-form__form-figure")
-                      img(src="http://placehold.it/180", class="p-form__form-image js-preview-img", alt="")
+                      img(src=`/images/posts/${post.thumbnail}`, class="p-form__form-image js-preview-img", alt=post.title)
                 div(class="p-form__form-row")
                   div(class="p-form__form-group")
                     label(class="p-form__form-label") Nội dung:
-                    #editor(class="p-form__form-editor")
-                    div(class="p-form__form-error") Vui lòng nhập nội dung.
+                    #editorEdit(class="p-form__form-editor")
                 div(class="p-form__form-column")
                   div(class="p-form__form-row p-form__form-row--btn")
                     button(type="submit", class="p-form__form-btn") Cập nhật
-                    a(href="", class="p-form__form-btn p-form__form-btn--delete") Hủy
+                    a(href="/admin/post/", class="p-form__form-btn p-form__form-btn--delete") Hủy
+                    script.
+                      const elementQuillEdit = document.getElementById("editorEdit");
+                      let quillEdit
+                      if (elementQuillEdit) {
+                        const toolbarOptions = [
+                          ["bold", "italic", "underline", "strike"], // toggled buttons
+                          ["blockquote", "code-block"],
+
+                          [{ header: 1 }, { header: 2 }], // custom button values
+                          [{ list: "ordered" }, { list: "bullet" }],
+                          [{ script: "sub" }, { script: "super" }], // superscript/subscript
+                          [{ indent: "-1" }, { indent: "+1" }], // outdent/indent
+                          [{ direction: "rtl" }], // text direction
+
+                          [{ size: ["small", false, "large", "huge"] }], // custom dropdown
+                          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+
+                          [{ color: [] }, { background: [] }],
+                          [{ font: [] }],
+                          [{ align: [] }],
+                          ["image"],
+
+                          ["clean"],
+                        ];
+                        quillEdit = new Quill(elementQuillEdit, {
+                          theme: "snow",
+                           modules: {
+                            toolbar: toolbarOptions,
+                          },
+                        });
+                        let delta = `!{JSON.stringify(post.content)}`
+                        quillEdit.setContents(JSON.parse(delta?.substring(1, delta?.length - 1)));
+                      }
+                      
+
+                      document.querySelector(".js-form-post-edit")?.addEventListener("submit", (e) => {
+                        e.preventDefault();
+                        const form = new FormData();
+                        const delta = quillEdit.getContents();
+                        const id = document.getElementById('postIdEdit').value;
+                        if(document.querySelector(".js-upload-file").files[0]) {
+                          form.append("thumbnail", document.querySelector(".js-upload-file").files[0]);
+                        }
+                        form.append("title", document.getElementById("postTitleEdit").value);
+                        form.append("tag", document.getElementById("postTagEdit").value);
+                        form.append("description", document.getElementById("postDescriptionEdit").value);
+                        form.append("metaDescription", document.getElementById("postMetaDescriptionEdit").value);
+                        form.append("metaKeywords", document.getElementById("postMetaKeywordsEdit").value);
+                        form.append("author", document.getElementById("postAuthorEdit").value);
+                        form.append("content", JSON.stringify(delta.ops));
+                        postEdit(form, id);
+                      });
+                      const postEdit = async (data, id) => {
+                        try {
+                          const res = await axios({
+                            method: "PATCH",
+                            url: `/api/v1/posts/${id}`,
+                            data,
+                          });
+                          if (res.data.status === "success") {
+                            alert("Cập nhật Post thành công!");
+                            window.setTimeout(() => {
+                              location.assign("/admin/post/");
+                            }, 500);
+                          }
+                        } catch (err) {
+                          console.log(err.response);
+                          alert(err.response.data.message);
+                        }
+                      };
+                    
+                    
+                     
+                    
